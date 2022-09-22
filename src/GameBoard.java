@@ -67,10 +67,7 @@ public class GameBoard {
 	}
 	
 	public ChessSquare getSpaceAt(int x, int y) {
-		if( x < 0 | x >= boardLength | y < 0 | y >= boardLength ) {
-			return null;
-		}
-		return squares[x][y];
+		return pointsInRange(x,y) ? squares[x][y]: null;
 	}
 	
 	public int[] findPosition(ChessPiece gPiece) {
@@ -107,6 +104,10 @@ public class GameBoard {
 		return null;
 	}
 	
+	public boolean pointsInRange(int x, int y) {
+		return  !( x < 0 || x >= boardLength || y < 0 || y >= boardLength);
+	}
+	
 	
 	public void initalizeGamePieceSet(ArrayList<ChessPiece> gamePieces, GameColor gameColor) {
 		gamePieces.clear();
@@ -129,5 +130,16 @@ public class GameBoard {
 		for(int i = 0; i < boardLength; i++) {
 			gamePieces.add(new Pawn(gameColor));
 		}
+	}
+	
+	public String getChessSquareString(int x, int y)
+	{
+		if(!pointsInRange(x,y))
+		{
+			 return "ERROR";
+		}
+		String letter = String.valueOf((char)(x+97));
+		String squareName = letter + y;
+		return squareName;
 	}
 }
