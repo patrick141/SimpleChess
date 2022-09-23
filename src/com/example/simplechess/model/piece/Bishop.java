@@ -1,3 +1,7 @@
+package com.example.simplechess.model.piece;
+
+import com.example.simplechess.model.game.GameColor;
+
 
 public class Bishop extends ChessPiece{
 	
@@ -13,7 +17,7 @@ public class Bishop extends ChessPiece{
 	}
 
 	@Override
-	String getName() {
+	public String getName() {
 		// TODO Auto-generated method stub
 		return "Bishop";
 	}
@@ -25,7 +29,7 @@ public class Bishop extends ChessPiece{
 	}
 
 	@Override
-	String getColor() {
+	public String getColor() {
 		// TODO Auto-generated method stub
 		return null;
 	}

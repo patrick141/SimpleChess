@@ -1,3 +1,5 @@
+package com.example.simplechess;
+import com.example.simplechess.model.game.*;
 import java.util.Scanner;
 
 public class Main {
@@ -24,6 +26,9 @@ public class Main {
             String command = scanner.nextLine(); 
             switch(command) {
 	            case "1": 
+	            	board.printBoard();
+	            	System.out.println("Decide next move");
+	            	System.out.println(board.getSpaceAt(0, 0));
 	            	turn = !turn;
 	            	break;
 	            case "2": 

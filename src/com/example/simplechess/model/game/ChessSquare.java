@@ -1,3 +1,8 @@
+package com.example.simplechess.model.game;
+
+import com.example.simplechess.model.piece.ChessPiece;
+
+
 public class ChessSquare {
 	public boolean isOccupied;
 	public ChessPiece piece;
@@ -23,6 +28,14 @@ public class ChessSquare {
 	
 	public GameColor getColor() {
 		return color;
+	}
+	
+	@Override
+	public String toString() {
+		if(piece == null) {
+			return super.toString();
+		}
+		return piece.getName() + " " + piece.getColor() + " occupied: " + isOccupied;
 	}
 	
 }

@@ -1,3 +1,6 @@
+package com.example.simplechess.model.piece;
+
+import com.example.simplechess.model.game.GameColor;
 
 
 public abstract class ChessPiece {
@@ -5,7 +8,7 @@ public abstract class ChessPiece {
 	protected boolean hasBeenMoved;
 	protected GameColor color;
 	abstract void move();
-	abstract String getName();
+	abstract public String getName();
 	abstract void attack();
-	abstract String getColor();
+	public abstract String getColor();
 }

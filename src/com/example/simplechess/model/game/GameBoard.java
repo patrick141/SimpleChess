@@ -1,11 +1,23 @@
+package com.example.simplechess.model.game;
+
+import com.example.simplechess.model.piece.Bishop;
+import com.example.simplechess.model.piece.ChessPiece;
+import com.example.simplechess.model.piece.Horse;
+import com.example.simplechess.model.piece.King;
+import com.example.simplechess.model.piece.Pawn;
+import com.example.simplechess.model.piece.Queen;
+import com.example.simplechess.model.piece.Rook;
+
 import java.util.*;
+
+import com.example.simplechess.util.GameConstants;
 
 public class GameBoard {
 	ArrayList<ChessPiece> whitePieces;
 	ArrayList<ChessPiece> blackPieces;
 	ChessSquare[][] squares;
-	public static int numOfPieces = 16;
-	public static int boardLength = 8;
+	public int numOfPieces = GameConstants.NUMBER_OF_PIECES;
+	public int boardLength = GameConstants.CHESSBOARD_LENGTH;
 	
 	public GameBoard() {
 		whitePieces = new ArrayList<ChessPiece>(numOfPieces);

@@ -1,3 +1,4 @@
+package com.example.simplechess.model.game;
 
 public class Player {
 	public String name;
