@@ -7,10 +7,10 @@ import com.example.simplechess.model.piece.King;
 import com.example.simplechess.model.piece.Pawn;
 import com.example.simplechess.model.piece.Queen;
 import com.example.simplechess.model.piece.Rook;
-
-import java.util.*;
-
 import com.example.simplechess.util.GameConstants;
+
+import java.util.ArrayList;
+
 
 public class GameBoard {
 	ArrayList<ChessPiece> whitePieces;

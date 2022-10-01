@@ -1,5 +1,8 @@
 package com.example.simplechess;
-import com.example.simplechess.model.game.*;
+
+import com.example.simplechess.model.game.Player;
+import com.example.simplechess.model.game.GameBoard;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +14,7 @@ public class Main {
 	public static Scanner scanner;
 	
 	public static void main(String[] args) {
-        System.out.println("Hello, World!");
+    	System.out.println("Hello, World!");
         board = new GameBoard();
         gameStatus = true;
         board.setUpClassicBoard();
@@ -45,6 +48,7 @@ public class Main {
 	            	break;
             }
         }
+        System.out.println("Game ended");
     }
 	
 	public static void printOptions()
