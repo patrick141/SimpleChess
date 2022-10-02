@@ -30,25 +30,25 @@ public class Main {
 			switch(command) {
 				case "1": 
 					board.printBoard();
-	            	System.out.println("Decide next move");
-	            	System.out.println(board.getSpaceAt(0, 0));
-	            	turn = !turn;
-	            	break;
-	            case "2": 
-	            	printHelp();
-	            	break;
-	            case "3": 
-	            	board.printBoard();
-	            	break;
-	            case "4": 
-	            	gameStatus = false;
-	            	break;
-	            default: 
-	            	System.out.println("Do not understand command");
-	            	break;
-            }
-        }
-        System.out.println("Game ended");
+					System.out.println("Decide next move");
+					System.out.println(board.getSpaceAt(0, 0));
+					turn = !turn;
+					break;
+				case "2":
+					printHelp();
+					break;
+				case "3":
+					board.printBoard();
+					break;
+				case "4": 
+					gameStatus = false;
+					break;
+				default: 
+					System.out.println("Do not understand command");
+					break;
+			}
+		}
+		System.out.println("Game ended");
 	}
 	
 	public static void printOptions()
